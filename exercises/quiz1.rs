@@ -7,10 +7,18 @@
 // more than 40 at once, each apple only costs 1! Write a function that calculates
 // the price of an order of apples given the order amount. No hints this time!
 
-// I AM NOT DONE
-
 // Put your function here!
-// fn ..... {
+fn calculate_apple_price(order_amount: i8) -> i8 {
+    let price: i8 = 2;
+    let discount_price: i8 = 1;
+    let discount_thresh: i8 = 40;
+
+    if order_amount > discount_thresh {
+        return order_amount * discount_price;
+    }
+
+    return order_amount * price;
+}
 
 // Don't modify this function!
 #[test]
